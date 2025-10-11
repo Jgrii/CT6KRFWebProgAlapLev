@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        p{
+            background-color: rgb(30,195,112);
+            padding: 10px;
+        }
+        span{
+            background-color: #ccff00;
+            padding: 10px;
+            color: black;
+        }
+        p.ji1{display: none;}
+        p.ji2{display: inline;}
+        p.ji3{display: block;}
+        p.ji4{display: inline-block;}
+        p.ji5{display: flex;}
+
+    </style>
+</head>
+<body>
+    <h1>Megjelenítési tulajdonság</h1>
+
+    <h2>display: none</h2>
+    <p class="ji1">
+        <span>PTI BSs 1</span>
+        <span>PTI BSc 2</span>
+        <span>PTI BSc 3</span>
+    </p>
+
+    <h2>display: inline:</h2>
+    <p class="ji2">
+        <span>PTI BSc 1</span>
+        <span>PTI BSc 2</span>
+        <span>PTI BSc 3</span>
+    </p>
+
+    <h2>display: block:</h2>
+    <p class="ji3">
+        <span>PTI BSc 1</span>
+        <span>PTI BSc 2</span>
+        <span>PTI BSc 3</span>
+    </p>
+
+    <h2>display: inline-block</h2>
+    <p class="ji4">
+        <span>PTI BSc 1</span>
+        <span>PTI BSc 2</span>
+        <span>PTI BSc 3</span>
+    </p>
+
+    <h2>display: flex</h2>
+    <p class="ji5">
+        <span>PTI BSc 1</span>
+        <span>PTI BSc 2</span>
+        <span>PTI BSc 3</span>
+    </p>
+</body>
+</html>
