@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szemfényvesztők - Szereplők</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 30px;
+        }
+        
+        .card {
+            width: 250px;
+            height: 350px;
+            position: relative;
+        }
+        
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 2px solid #333;
+        }
+        
+        .card-front {
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .card-back {
+            background-color: #333;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 20px;
+        }
+        
+        .character-image {
+            width: 200px;
+            height: 250px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Szemfényvesztők</h1>
+        <p>Szereplők</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="szereplok.html">Szereplők</a>
+        <a href="film1.html">1. Film</a>
+        <a href="film2.html">2. Film</a>
+        <a href="film3.html">3. Film</a>
+        <a href="urlap.html">Űrlap</a>
+    </nav>
+    
+    <article>
+        <section>
+            <h2>A főbb szereplők</h2>
+            
+            <div class="card-container">
+                
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/JesseEisenberg.jpg" alt="J. Daniel Atlas" height="100%"></div>
+                            <h3>J. Daniel Atlas</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>J. Daniel Atlas</h3>
+                            <p><strong>Színész:</strong> Jesse Eisenberg</p>
+                            <p><strong>Szerepkör:</strong> Lovas</p>
+                            <p><strong>Szereplések:</strong> 1-3. Film</p>
+                            <p>Arrogáns illuzionista és utcai bűvész, valamint a Négy Lovas nyilvánosan látható vezetője.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/DaveFranco.jpg" alt="Jack Wilder" width="100%"></div>
+                            <h3>Jack Wilder</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Jack Wilder</h3>
+                            <p><strong>Színész:</strong> Dave Franco</p>
+                            <p><strong>Szerepkör:</strong> Lovas</p>
+                            <p><strong>Szereplések:</strong> 1-3. Film</p>
+                            <p>Kézügyességi illuzionista, utcai bűvész és mások hangjainak tehetséges impresszionista. Emellett zsebtolvaj is, és képes zárakat feltörni. A húszas évei elején járó Wilder a Négy Lovas közül a legfiatalabb, így felnéz a többiekre.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/WoodyHarrelson.jpg" alt="Merritt McKinney" width="100%"></div>
+                            <h3>Merrit Mckinney</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Merritt McKinney</h3>
+                            <p><strong>Színész:</strong> Woody Harrelson</p>
+                            <p><strong>Szerepkör:</strong> Lovas</p>
+                            <p><strong>Szereplések:</strong> 1-3. Film</p>
+                            <p>Hipnotizőr, mentalist és önjelölt médium. Eredetileg fiatalkorában híresebb hipnotizőr és mentalista volt, de jól ment a sora, mígnem a bátyja, aki egyben a menedzsere is volt, ellopta az összes pénzét és megszökött. Merritt a legidősebb lovas mindközül.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/IslaFisher.jpg" alt="Henley Reeves" height="100%"></div>
+                            <h3>Henley Reeves</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Henley Reeves</h3>
+                            <p><strong>Színész:</strong> Isla Fisher</p>
+                            <p><strong>Szerepkör:</strong> Lovas</p>
+                            <p><strong>Szereplések:</strong> 1,3 Film</p>
+                            <p>Eszképista és színpadi bűvész. Ő volt J. Daniel Atlas korábbi asszisztense is.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/LizzyCaplan.jpg" alt="Lula May" height="100%"></div>
+                            <h3>Lula May</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Lula May</h3>
+                            <p><strong>Színész:</strong> Lizzy Caplan</p>
+                            <p><strong>Szerepkör:</strong> Lovas</p>
+                            <p><strong>Szereplések:</strong> 2-3. Film</p>
+                            <p>A megtévesztés mestere. A második részben Hanley Reeves bukása után ő lett az új női lovas, Jack Wilder szerelme</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/MarkRuffalo.jpg" alt="Dylan Rhodes" width="100%"></div>
+                            <h3>Dylan Rhodes</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Dylan Rhodes</h3>
+                            <p><strong>Színész:</strong> Mark Ruffalo</p>
+                            <p><strong>Szerepkör:</strong> FBI Ügynök 1. Film</p>
+                            <p><strong>Szerepkör:</strong> Lovas 2-3 Film</p>
+                            <p> FBI-ügynök, aki a Négy Lovas felkutatásán és elfogásán dolgozik. Akiről később kiderül, hogy Loinel Shrike (a világ egyik leghíresebb bűvésze) fia, a lovasok láthatatlan vezetője.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/MorganFreeman.jpg" alt="Thaddeus Bradley" height="100%"></div>
+                            <h3>Thaddeus Bradley</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Thaddeus Bradley</h3>
+                            <p><strong>Színész:</strong> Morgan Freeman</p>
+                            <p><strong>Szerepkör:</strong> Bűvész</p>
+                            <p><strong>Szereplések:</strong> 1-3. Film</p>
+                            <p>Egykori bűvészként, aki harminc éven át más bűvészek trükkjei mögött rejlő titkok felfedésével keresett pénzt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/ArianaGreenblatt.jpg" alt="June Rouclere" width="100%"></div>
+                            <h3>June Rouclere</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>June Rouclere</h3>
+                            <p><strong>Színész:</strong> Ariana Greenblatt</p>
+                            <p><strong>Szerepkör:</strong> Illuzionista</p>
+                            <p><strong>Szereplések:</strong> 3. Film</p>
+                            <p>Az illuzionista csapat tagja, profi zsebtolvaj, zárfeltörő.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/JusticeSmith.jpg" alt="Charlie Vanderberg" width="100%"></div>
+                            <h3>Charlie Vanderberg</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Charlie Vanderberg</h3>
+                            <p><strong>Színész:</strong> Justice Smith</p>
+                            <p><strong>Szerepkör:</strong> Illuzionista</p>
+                            <p><strong>Szereplések:</strong> 3. Film</p>
+                            <p>Az illuzionista csapat technikai háttér embere, akiről később kiderül, hogy nem is volt annyira a háttérben.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/DominicSessa.jpg" alt="Bosco LeRoy" width="100%"></div>
+                            <h3>Bosco LeRoy</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Bosco LeRoy</h3>
+                            <p><strong>Színész:</strong> Dominic Sessa</p>
+                            <p><strong>Szerepkör:</strong> Illuzionista</p>
+                            <p><strong>Szereplések:</strong> 3. Film</p>
+                            <p>Ő és az illuzionista csapata egy hamis bűvésztrükkel meglopnak egy kripto befektetőt és a barátait.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/MichaelCaine.jpg" alt="Arthur Tressler" height="100%"></div>
+                            <h3>Arthur Tressler</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Arthur Tressler</h3>
+                            <p><strong>Színész:</strong> Michael Caine</p>
+                            <p><strong>Szerepkör:</strong> Főgonosz</p>
+                            <p><strong>Szereplések:</strong> 1-2. Film</p>
+                            <p>Biztosítási mágnás és a Négy Lovas szponzora az első filmben. Biztosítási csalásai miatt a Négy Lovas buktatta le.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/DanielRadcliffe.jpg" alt="Walter Mabry" width="100%"></div>
+                            <h3>Walter Mabry</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Walter Mabry</h3>
+                            <p><strong>Színész:</strong> Daniel Radcliffe</p>
+                            <p><strong>Szerepkör:</strong> Főgonosz</p>
+                            <p><strong>Szereplések:</strong> 2. Film</p>
+                            <p>Waltert egy évig halottnak hitték, mielőtt a Négy Lovas felfedte, hogy él . Később elárulja, hogy apja, Arthur Tressler volt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-image"><img src="Images/RosamundPike.jpg" alt="Veronika Vanderberg" width="100%"></div>
+                            <h3>Veronika Vanderberg</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3>Veronika Vanderberg</h3>
+                            <p><strong>Színész:</strong> Rosamund Pike</p>
+                            <p><strong>Szerepkör:</strong> Főgonosz</p>
+                            <p><strong>Szereplések:</strong> 3. Film</p>
+                            <p>Egy pénzmosásba keveredett gyémántcég matriarcháját alakítja.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </article>
+    
+    <footer>
+        <p>Szemfényvesztők weboldal - 2025</p>
+        <p>Készítette: Jáger Imre - CT6KRF</p>
+    </footer>
+</body>
+</html>
