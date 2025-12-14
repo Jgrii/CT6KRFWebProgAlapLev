@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szemfényvesztők - Kapcsolat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error-input {
+            border-color: red !important;
+        }
+        
+        .submit-btn {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1abc9c;
+        }
+        
+        .checkbox-group, .radio-group {
+            margin: 10px 0;
+        }
+        
+        .checkbox-group label, .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Szemfényvesztők</h1>
+        <p>Űrlap</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="szereplok.html">Szereplők</a>
+        <a href="film1.html">1. Film</a>
+        <a href="film2.html">2. Film</a>
+        <a href="film3.html">3. Film</a>
+        <a href="urlap.html">Űrlap</a>
+    </nav>
+    
+    <article>
+        <section class="form-container">
+            <h2>Vélemény</h2>
+            <p>Töltsd ki az alábbi űrlapot.</p>
+            
+            <form id="contactForm">
+                
+                <div class="form-group">
+                    <label for="name">Név: *</label>
+                    <input type="text" id="name" name="name">
+                    <div class="error-message" id="nameError">A név megadása kötelező!</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail cím: *</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error-message" id="emailError">Adj meg egy érvényes e-mail címet!</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthdate">Születési dátum:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+                
+                <div class="form-group">
+                    <label for="favFilm">Kedvenc filmed:</label>
+                    <select id="favFilm" name="favFilm">
+                        <option value="">-- Válassz --</option>
+                        <option value="film1">1. Film</option>
+                        <option value="film2">2. Film</option>
+                        <option value="film3">3. Film</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mit szeretsz a filmekben?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="action" name="genres" value="action">
+                        <label for="action">Akció</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mystery" name="genres" value="mystery">
+                        <label for="mystery">Rejtély</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="magic" name="genres" value="magic">
+                        <label for="magic">Varázslat</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Hányszor nézted meg a filmeket?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="once" name="times" value="1">
+                        <label for="once">Egyszer</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="multiple" name="times" value="2-5">
+                        <label for="multiple">2-5 alkalommal</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="many" name="times" value="5+">
+                        <label for="many">5-nél többször</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Üzenet:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <div class="error-message" id="messageError">Az üzenet megadása kötelező!</div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Küldés</button>
+                    <button type="reset" class="submit-btn" style="background-color: #95a5a6;">Törlés</button>
+                </div>
+                
+            </form>
+        </section>
+    </article>
+    
+    <footer>
+        <p>Szemfényvesztők weboldal - 2025</p>
+    </footer>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            var isValid = true;
+            
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            
+            document.getElementById("nameError").style.display = "none";
+            document.getElementById("emailError").style.display = "none";
+            document.getElementById("messageError").style.display = "none";
+            
+            document.getElementById("name").classList.remove("error-input");
+            document.getElementById("email").classList.remove("error-input");
+            
+            if (name == "") {
+                document.getElementById("nameError").style.display = "block";
+                document.getElementById("name").classList.add("error-input");
+                isValid = false;
+            }
+            
+            if (email == "" || email.indexOf("@") == -1) {
+                document.getElementById("emailError").style.display = "block";
+                document.getElementById("email").classList.add("error-input");
+                isValid = false;
+            }
+            
+            if (isValid) {
+                alert("Az űrlap sikeresen elküldve!");
+                document.getElementById("contactForm").reset();
+            }
+        });
+        
+        $(document).ready(function() {
+            $("#name").focus(function() {
+                $(this).animate({
+                    borderWidth: "4px"
+                }, 300);
+            });
+            
+            $("#name").blur(function() {
+                $(this).animate({
+                    borderWidth: "2px"
+                }, 300);
+            });
+
+            $("#email").focus(function() {
+                $(this).animate({
+                    borderWidth: "4px"
+                }, 300);
+            });
+            
+            $("#email").blur(function() {
+                $(this).animate({
+                    borderWidth: "2px"
+                }, 300);
+            });
+
+            $("#birthdate").focus(function() {
+                $(this).animate({
+                    borderWidth: "4px"
+                }, 300);
+            });
+            
+            $("#birthdate").blur(function() {
+                $(this).animate({
+                    borderWidth: "2px"
+                }, 300);
+            });
+
+            $("#favFilm").focus(function() {
+                $(this).animate({
+                    borderWidth: "4px"
+                }, 300);
+            });
+            
+            $("#favFilm").blur(function() {
+                $(this).animate({
+                    borderWidth: "2px"
+                }, 300);
+            });
+
+            $("#message").focus(function() {
+                $(this).animate({
+                    borderWidth: "4px"
+                }, 300);
+            });
+            
+            $("#message").blur(function() {
+                $(this).animate({
+                    borderWidth: "2px"
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
