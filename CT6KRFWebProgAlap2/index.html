@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szemfényvesztők</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .video-container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .controls {
+            margin-top: 15px;
+        }
+        
+        .controls button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .intro-section {
+            margin-top: 30px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Szemfényvesztők</h1>
+        <br>
+        <p>Ezen a weboldalon megismerheted a Szemfényvesztők filmsorozatot, szereplőit.</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="szereplok.html">Szereplők</a>
+        <a href="film1.html">1. Film</a>
+        <a href="film2.html">2. Film</a>
+        <a href="film3.html">3. Film</a>
+        <a href="urlap.html">Űrlap</a>
+    </nav>
+    
+    <article>
+        <section class="video-container">
+            <h2>Előzetes videó</h2>
+            <div class="video-placeholder" id="videoBox">
+                <video id="elozetes" preload="auto" width="80%" controls poster="Images/poszter.png">
+                    <source src="Now You See Me - All Atlas Card Magic Trick Scenes - Emre Göktepe (720p, h264).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="controls">
+                <button id="playBtn" onclick="playVideo()">Lejátszás</button>
+                <button id="pauseBtn" onclick="pauseVideo()">Szünet</button>
+                <button id="stopBtn" onclick="reVideo()">Újra</button>
+                <button id="stopBtn" onclick="forward()">Előre</button>
+                <button id="stopBtn" onclick="back()">Vissza</button>
+            </div>
+        </section>
+        
+        <section class="intro-section">
+            <h2>A Szemfényvesztők sorozatról</h2>
+            <div>
+                <p>A szemfényvesztők filmsorozat a modern bűvészet világát ötvözi a látványos rablásokkal és a csavaros thriller-elemekkel. Középpontjában a „Négy Lovas” nevű illuzionistacsapat áll, akik színpadi trükkjeiket arra használják, hogy leleplezzenek korrupt alakokat, miközben a közönség szeme láttára végrehajtott bravúros mutatványaik mögött mindig nagyobb terv rejlik. A franchise különlegessége, hogy a bűvészet nemcsak díszlet, hanem a történet mozgatórugója.</p>
+                <p>A három részből álló sorozat minden filmben újabb szintre emeli az illúziók méretét és bonyolultságát. Az első rész bemutatja a Lovasokat és alapozza a misztikus, titkokkal teleszőtt világot; a második rész tovább mélyíti a karakterek kapcsolatait és nemzetközivé tágítja a történetet; a harmadik rész új tagokkal frissíti a csapatot, miközben továbbviszi a nagy léptékű heistek és a látványos bűvészmutatványok hagyományát. A három film így folyamatosan bővíti a világot és a mögötte álló legendát.</p>
+                <p>A franchise sikerét a lendületes ritmus, a látványos trükkök és a folyamatos meglepetések adják. A filmek egyszerre játszanak a néző kíváncsiságával és a „hogyan csinálták?” élménnyel, miközben szórakoztató módon keverik a krimit, az akciót és a bűvészet misztikumát. A háromrészes sorozat így egyedi színfolt a heist-filmek műfajában, és a rajongók számára egyre táguló, trükkökkel teli univerzumot kínál.</p>
+            </div>
+        </section>
+    </article>
+    
+    <aside>
+        <h3>Érdekességek</h3>
+        <ul>
+            <li>A filmek illúzióinak jelentős részét valódi bűvésztrükkök inspirálták. A szereplőket David Kwong bűvész képezte.</li>
+            <li>A filmekben látott Lovasok-szimbólumot úgy tervezték meg, hogy benne több titkosírás-elem és szimbolikus utalás rejlik.</li>
+            <li>A forgatás során több illúziót úgy vettek fel, hogy a körülöttük lévő statisztáknak nem árulták el, mi fog történni.</li>
+        </ul>
+    </aside>
+    
+    <footer>
+        <p>Szemfényvesztők weboldal - 2025</p>
+        <p>Készítette: Jáger Imre - CT6KRF</p>
+    </footer>
+    
+    <script>
+        var video = document.getElementById("elozetes")
+        function playVideo() {
+            video.play()
+        }
+        
+        function pauseVideo() {
+            video.pause()
+        }
+        
+        function reVideo() {
+            video.currentTime = 0
+        }
+
+        function forward() {
+            video.currentTime += 10
+        }
+
+        function back() {
+            video.currentTime -= 10
+        }
+    </script>
+</body>
+</html>
